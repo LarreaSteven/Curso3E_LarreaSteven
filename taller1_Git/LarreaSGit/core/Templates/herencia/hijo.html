@@ -1,0 +1,50 @@
+{% extends 'herencia/principal.html'%}
+<style>
+
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  img {
+  float: left;
+  }
+</style>
+{% block titulo %}
+htmlhijo
+{% endblock %}
+
+
+{% load static %}
+
+
+<h1>{% block ti %} HERENCIA{% endblock %}</h1>
+{% block contenido %}
+
+
+<center>
+<form>
+    <label>CURSO:</label><br>
+    <input type="text"  value="{% for presenta in enviaSteven %}
+     {{ presenta.curso }}  {% endfor%}"><br>
+<br>
+    <br>
+    <label>NOMBRES:</label><br>
+    <input type="text"  value="{% for presenta in enviaSteven %}
+     {{ presenta.nombres }}  {% endfor%}"><br>
+<br>
+    <br>
+    <label>APELLIDOS:</label><br>
+    <input type="text"  value="{% for presenta in enviaSteven %}
+     {{ presenta.apellidos }}  {% endfor%}"><br>
+<br>
+    <br>
+    <label>PREFESOR:</label><br>
+        <input type="Float" value="{% for presenta in enviaSteven %}
+     {{ presenta.profesor }}  {% endfor%}"><br>
+</form>
+</center>
+<img src="{%static 'core/img/logo.jpg' %}" >
+
+{% endblock %}

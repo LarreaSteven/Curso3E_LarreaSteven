@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %} {% endblock %}</title>
+	{% load static %}
+	<link rel="stylesheet" href="{%static 'core/css/diseño1.css' %}">
+    <link rel="stylesheet" href="{%static 'core/css/menuodonto.css' %}">
+
+</head>
+<body>
+
+<h1>{% block ti %} {% endblock %}</h1>
+
+
+<nav class="menuCSS3">
+		<ul>
+			<li><a href="{% url 'core' %}">INICIO</a>
+		</ul>
+</nav>
+
+{% block contenido %} {% endblock %}
+
+</body>
+</html>
